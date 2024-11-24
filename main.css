@@ -412,6 +412,7 @@ abbr {
 		transform: translateX(-50%);
 		background-color: unset;
 		border: unset;
+		animation-fill-mode: unset;
 		& > :first-child {
 			padding-inline-end: 2rem;
 			transform: translateX(-100%);
