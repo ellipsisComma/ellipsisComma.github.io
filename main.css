@@ -112,6 +112,7 @@
 	--delay-factor: 1;
 	--delay-final: calc(5s * var(--delay-factor));
 	--line-width: 2px;
+	--logo-block-size: 42px;
 	--main-column-max-inline-size: 800px;
 	--structure-padding: 1rem;
 	--font-size-factor: 1;
@@ -128,7 +129,7 @@ body {
 /* LOGO */
 
 #logo {
-	block-size: 42px;
+	block-size: var(--logo-block-size);
 	display: block;
 	fill: var(--accent-colour);
 }
@@ -389,13 +390,14 @@ abbr {
 
 @media (min-width: 600px) {
 	:root {
+		--logo-block-size: 64px;
 		--font-size-factor: 1.2;
 	}
 	header {
 		padding-block: 0.5rem;
 	}
 	#logo {
-		block-size: 64px;
+		block-size:  var(--logo-block-size);
 	}
 }
 @media (min-width: 1280px) {
