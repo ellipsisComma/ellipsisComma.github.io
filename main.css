@@ -16,7 +16,7 @@
 	--fore-colour: #222;
 	--back-colour: #fff;
 	--accent-colour: #a40000;
-	--link-colour: #33f;
+	--link-colour: #22f;
 	--link-colour-visited: #a00;
 	--link-colour-active: var(--link-colour-visited);
 }
@@ -37,8 +37,8 @@
 	@media (prefers-color-scheme: dark) {
 		:root {
 			--back-colour: #15202a;
-			--link-colour: #ff7Eb5;
-			--link-colour-visited: #f96;
+			--link-colour: #ffa3d5;
+			--link-colour-visited: #fa7;
 		}
 	}
 	#big-red {
