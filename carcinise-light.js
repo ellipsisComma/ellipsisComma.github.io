@@ -7,7 +7,7 @@ const carciniseButton = document.getElementById(`carcinise`);
 // when tab or window is fully hidden reveal button
 window.addEventListener(`visibilitychange`, () => {
 	if (document.hidden) carciniseButton.hidden = false;
-});
+}, {"once": true});
 
 // carcinise an element (recursively carcinise its node children)
 function carcinise() {
