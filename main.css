@@ -359,7 +359,7 @@ code {
 	user-select: none;
 	-webkit-user-select: none;
 }
-#carcinise:active {
+#carcinise:is(:active, :focus-visible) {
 	background-color: color(from var(--accent-colour) srgb r g b / 0.15);
 }
 #carcinise, #carcinise > span {
