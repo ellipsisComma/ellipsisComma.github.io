@@ -76,12 +76,12 @@
 	display: none;
 }
 .visually-hidden {
-	clip-path: inset(50%);
 	block-size: 1px;
 	inline-size: 1px;
-	overflow: hidden;
 	position: absolute;
+	overflow: hidden;
 	white-space: nowrap;
+	clip-path: inset(50%);
 }
 #svg-defs {
 	position: absolute;
