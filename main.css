@@ -208,6 +208,12 @@ header {
 }
 #contact-links {
 	--delay: var(--delay-final);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	column-gap: 0.5em;
+	padding-inline-start: 0;
+	list-style-type: "";
 }
 main {
 	--delay: var(--delay-final);
@@ -291,15 +297,6 @@ code {
 
 /* LISTS */
 
-.flex-list {
-	display: flex;
-	flex-wrap: wrap;
-	padding-inline-start: 0;
-	list-style-type: "";
-	align-items: center;
-	justify-content: center;
-	gap: 1em;
-}
 .info-grid {
 	display: grid;
 	grid-template-columns: max-content auto;
