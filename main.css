@@ -352,12 +352,14 @@ code {
 	backdrop-filter: blur(6px);
 	-webkit-backdrop-filter: blur(6px);
 	transform: translateX(-50%);
-	cursor: pointer;
-	user-select: none;
 	-webkit-user-select: none;
+	cursor: pointer;
 }
 #carcinise:is(:active, :focus-visible) {
 	background-color: color(from var(--accent-colour) srgb r g b / 0.15);
+}
+#carcinise:hover > span {
+	transform: scale(1.2);
 }
 #carcinise, #carcinise > span {
 	transform-origin: center;
