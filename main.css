@@ -234,7 +234,7 @@ footer {
 	padding-block: 0.5rem;
 	padding-inline: var(--structure-padding);
 	text-align: center;
-	text-wrap: balance;
+	text-wrap-style: balance;
 	line-height: 1.2;
 	font-family: var(--accent-font-stack);
 	color: #fff;
