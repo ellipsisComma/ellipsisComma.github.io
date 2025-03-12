@@ -212,7 +212,6 @@ header {
 	flex-direction: row;
 	align-items: center;
 	column-gap: 0.5em;
-	padding-inline-start: 0;
 	list-style-type: "";
 }
 main {
@@ -433,14 +432,14 @@ code {
 		background-color: unset;
 		border: unset;
 		animation-fill-mode: unset;
-		& > :first-child {
-			padding-inline-end: 2rem;
-			transform: translateX(-100%);
-		}
-		& > :last-child {
-			padding-inline-start: 2rem;
-			transform: translateX(100%);
-		}
+	}
+	#logo {
+		padding-inline-end: 2rem;
+		transform: translateX(-100%);
+	}
+	#contact-links {
+		padding-inline-start: 2rem;
+		transform: translateX(100%);
 	}
 	main {
 		padding-inline: 0;
