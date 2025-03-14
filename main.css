@@ -134,10 +134,10 @@
 	--structure-padding: 1rem;
 	--font-size-factor: 1;
 	--accent-font-stack: Roboto, Verdana, Arial, sans-serif;
+	font-size: 100%;
 }
 body {
 	margin: 0;
-	font-size: 100%;
 	font-family: "PT Serif", Georgia, Garamond, "Times New Roman", serif;
 	color: var(--fore-colour);
 	background-color: var(--back-colour);
