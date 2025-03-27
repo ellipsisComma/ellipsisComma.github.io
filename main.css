@@ -129,8 +129,8 @@
 	--delay-factor: 1;
 	--delay-final: calc(5s * var(--delay-factor));
 	--line-width: 2px;
-	--logo-block-size: 42px;
-	--main-column-max-inline-size: 800px;
+	--logo-block-size: 2.75rem;
+	--main-column-max-inline-size: 50rem;
 	--structure-padding: 1rem;
 	--font-size-factor: 1;
 	--accent-font-stack: Roboto, Verdana, Arial, sans-serif;
@@ -395,9 +395,9 @@ code {
 
 /* RESPONSIVITY */
 
-@media (min-width: 600px) {
+@media (min-width: 35rem) {
 	:root {
-		--logo-block-size: 64px;
+		--logo-block-size: 4rem;
 		--font-size-factor: 1.2;
 	}
 	header {
@@ -407,7 +407,7 @@ code {
 		block-size:  var(--logo-block-size);
 	}
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
 	#container {
 		position: relative;
 	}
