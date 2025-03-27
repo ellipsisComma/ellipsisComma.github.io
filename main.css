@@ -181,9 +181,6 @@ body {
 /* STRUCTURE */
 
 header {
-	position: sticky;
-	inset-block-start: 0;
-	z-index: 2;
 	display: flex;
 	justify-content: space-between;
 	padding-block: 0.2rem;
@@ -197,13 +194,6 @@ header {
 	animation-fill-mode: forwards;
 	& > * {
 		margin-block: 0;
-	}
-}
-@keyframes appear-border {
-	to {
-		border-block-end-width: 3px;
-		border-block-end-style: solid;
-		border-block-end-color: var(--fore-colour);
 	}
 }
 #contact-links {
@@ -430,7 +420,6 @@ code {
 		padding: unset;
 		transform: translateX(-50%);
 		background-color: unset;
-		border: unset;
 		animation-fill-mode: unset;
 	}
 	#logo {
