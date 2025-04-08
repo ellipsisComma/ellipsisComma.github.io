@@ -46,10 +46,6 @@
 		--scrollbar-thumb-colour: revert;
 		--scrollbar-gutter-colour: revert;
 	}
-	#carcinise {
-		background: var(--back-colour);
-		backdrop-filter: unset;
-	}
 }
 
 /* ====================== END USER */ }
@@ -328,83 +324,6 @@ code {
 		& > :last-child {
 			margin-block-end: 0;
 		}
-	}
-}
-
-/* CARCINISE */
-
-#carcinise {
-	aspect-ratio: 1;
-	position: fixed;
-	inset-block-end: 0.6rem;
-	inset-inline-start: 50%;
-	z-index: 2;
-	display: flex;
-	align-items: center;
-	padding: 0.5rem;
-	text-align: center;
-	font-size: 2rem;
-	font-family: unset;
-	background-color: unset;
-	border-width: var(--line-width);
-	border-style: solid;
-	border-color: coral;
-	border-radius: 0.3em;
-	outline-width: var(--line-width);
-	outline-style: solid;
-	outline-color: var(--back-colour);
-	backdrop-filter: blur(6px);
-	-webkit-backdrop-filter: blur(6px);
-	transform: translateX(-50%);
-	-webkit-user-select: none;
-	cursor: pointer;
-}
-#carcinise:is(:active, :focus-visible) {
-	background-color: color(from var(--accent-colour) srgb r g b / 0.15);
-}
-#carcinise:hover > span {
-	transform: scale(1.2);
-}
-#carcinise, #carcinise > span {
-	transform-origin: center;
-	animation-duration: 5s;
-	animation-timing-function: step-end;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-}
-@keyframes scuttle-outer {
-	20% {
-		inset-inline-start: 40%;
-	}
-	40% {
-		inset-inline-start: 30%;
-	}
-	60% {
-		inset-inline-start: 20%;
-	}
-	80% {
-		inset-inline-start: 10%;
-	}
-	100% {
-		inset-inline-start: 0;
-		opacity: 0;
-	}
-}
-@keyframes scuttle-inner {
-	20% {
-		transform: rotate(18deg);
-	}
-	40% {
-		transform: rotate(-18deg);
-	}
-	60% {
-		transform: rotate(18deg);
-	}
-	80% {
-		transform: rotate(-18deg);
-	}
-	100% {
-		transform: rotate(18deg);
 	}
 }
 
