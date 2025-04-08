@@ -16,33 +16,39 @@
 	--fore-colour: #222;
 	--back-colour: #fff;
 	--accent-colour: #a40000;
-	--link-colour: #22f;
-	--link-colour-visited: #a00;
-	--link-colour-active: var(--link-colour-visited);
+	--link-colour: #a00;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
 		--fore-colour: #ccdfef;
 		--back-colour: #234;
 		--accent-colour: #fff;
-		--link-colour: #f42;
-		--link-colour-visited: #f85;
-		--link-colour-active: var(--link-colour-visited);
+		--link-colour: #fa8;
 	}
 	h2 {
 		color: var(--accent-colour);
 	}
 }
 @media (prefers-contrast: more) {
-	@media (prefers-color-scheme: dark) {
-		:root {
-			--back-colour: #15202a;
-			--link-colour: #ffa3d5;
-			--link-colour-visited: #fa7;
-		}
-	}
 	#big-red {
-		color: #ff5e5e;
+		color: #ff8e8e;
+	}
+}
+@media (forced-colors: active) {
+	:root {
+		--fore-colour: CanvasText;
+		--back-colour: Canvas;
+		--accent-colour: CanvasText;
+		--link-colour: LinkText;
+
+		--selection-text-colour: revert;
+		--selection-background-colour: revert;
+		--scrollbar-thumb-colour: revert;
+		--scrollbar-gutter-colour: revert;
+	}
+	#carcinise {
+		background: var(--back-colour);
+		backdrop-filter: unset;
 	}
 }
 
@@ -251,13 +257,14 @@ h1 {
 	}
 }
 h2 {
-	margin-block-start: 1.5em;
-	margin-block-end: 0;
+	margin-block-start: 2.5em;
+	margin-block-end: 0.2em;
 	line-height: 1.1;
 	text-transform: uppercase;
 	font-size: calc(1.28rem * var(--font-size-factor));
 	font-weight: 500;
 	font-family: var(--accent-font-stack);
+	font-feature-settings: "cpsp";
 	& + * {
 		margin-block-start: 0;
 	}
@@ -266,16 +273,24 @@ h2 {
 /* BODY TEXT */
 
 a {
-	color: var(--link-colour);
+	color: inherit;
+	text-decoration-color: var(--link-colour);
+	text-decoration-thickness: 0.15em;
+	text-decoration-skip-ink: none;
+	text-underline-offset: 0.25em;
+	transition-property: color, text-decoration-thickness, text-underline-offset;
+	transition-duration: 0.125s;
 }
-a:visited {
-	color: var(--link-colour-visited);
+a:hover, a:focus-visible {
+	color: var(--back-colour);
+	text-decoration-thickness: 1.5em;
+	text-underline-offset: -1.1em;
+}
+a:focus-visible {
+	outline-offset: calc(2 * var(--line-width));
 }
 a:active {
-	color: var(--link-colour-active);
-	outline-width: var(--line-width);
-	outline-style: dotted;
-	outline-color: var(--link-colour-active);
+	text-decoration-color: var(--fore-colour);
 }
 abbr {
 	font-feature-settings: "cpsp";
