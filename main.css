@@ -143,6 +143,21 @@ body {
 	font-family: "PT Serif", Georgia, Garamond, "Times New Roman", serif;
 	color: var(--fore-colour);
 	background-color: var(--back-colour);
+	overflow: hidden;
+	user-select: none;
+	pointer-events: none;
+	animation-name: appear-scroll;
+	animation-duration: 0s;
+	animation-delay: var(--delay-final);
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+@keyframes appear-scroll {
+	to {
+		overflow: auto;
+		user-select: auto;
+		pointer-events: auto;
+	}
 }
 
 /* LOGO */
