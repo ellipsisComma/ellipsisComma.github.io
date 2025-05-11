@@ -237,7 +237,8 @@ main {
 }
 footer {
 	--delay: var(--delay-final);
-	padding-block: 0.5rem;
+	margin-block-start: 1.5rem;
+	padding-block: 1.5rem;
 	padding-inline: var(--structure-padding);
 	text-align: center;
 	text-wrap-style: balance;
@@ -332,6 +333,7 @@ code {
 		}
 	}
 	& > dd {
+		margin-block-start: 0.5rem;
 		margin-inline-start: 0.5lh;
 		& > :first-child {
 			margin-block-start: 0;
