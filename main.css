@@ -17,6 +17,7 @@
 	--back-colour: #fff;
 	--accent-colour: #a40000;
 	--link-colour: #a00;
+	--logo-colour: var(--accent-colour);
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -24,6 +25,7 @@
 		--back-colour: #234;
 		--accent-colour: #fff;
 		--link-colour: #fa8;
+		--logo-colour: #f40;
 	}
 	h2 {
 		color: var(--accent-colour);
@@ -165,7 +167,7 @@ body {
 #logo {
 	block-size: var(--logo-block-size);
 	display: block;
-	fill: var(--accent-colour);
+	fill: var(--logo-colour);
 }
 #ellipsis-comma {
 	& > :nth-child(1) {
@@ -317,6 +319,9 @@ code {
 	display: grid;
 	grid-template-columns: max-content auto;
 	column-gap: 1rem;
+	& > dt {
+		opacity: 0.75;
+	}
 	& > dt::after {
 		content: ":";
 	}
